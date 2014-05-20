@@ -1,0 +1,403 @@
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333;
+    border-radius: 12px;
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Frequentist Dilemma - Math, Stats and Technical stuff</title>
+  <meta name="author" content="Kaiyin Zhong">
+
+  
+  <meta name="description" content="image/svg+xml Treatment A vs B A vs B A vs B A vs B A vs B A vs B A vs B P = 0.02 P = 0.02 This first one mulst be corrected for multiple testing, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kindlychung.github.io/blog/2014/05/20/frequentist-dilemma">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Math, Stats and Technical stuff" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+
+
+
+
+
+  <script src='/javascripts/mathjax/MathJax.js' type='text/javascript'>
+    MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"],
+               equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                   processEscapes: true },
+        "HTML-CSS": { availableFonts: ["TeX"],
+                      linebreaks: { automatic: true } }
+    });
+</script>
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+
+
+
+
+<style type='text/css'>
+.smallnote {
+    display: inline;
+    font-size: 80%;
+    color: #2b9600;
+}
+.hidden {
+    color: white;
+}
+.description {
+    font-family: serif;
+    font-size: 10;
+}
+.codeclick {
+    font-weight: bold;
+}
+.prewrap {
+    font-size: 70%;
+	padding: 16px;
+    max-height: 300px;
+    max-width:500px !important;
+	overflow: auto;
+    display: block;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-above: 5px !important;
+    margin-below: 5px !important;
+}
+.pretitle {
+    background-color: #aaa;
+	text-align: center;
+}
+.proofblock {
+    background: #eee;
+    margin: 10px;
+    padding: 10px;
+}
+pre {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+    display: block;
+}
+object
+{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 20px;
+}
+img
+{
+    height: auto !important;
+    max-width: 95% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 5px;
+}
+a,
+a:hover
+{
+    text-decoration: none !important;
+    font-weight: bold;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Math, Stats and Technical stuff</a></h1>
+  
+    <h2>a learner's notebook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kindlychung.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Frequentist Dilemma</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T20:48:48+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="drawing.svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" inkscape:version="0.48.4 r9939" viewbox="0 0 639.15 245" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview fit-margin-left="1.7" inkscape:zoom="1" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="197.9983" inkscape:cy="160.31015" inkscape:window-maximized="1" showgrid="false" fit-margin-right="1.3" units="mm" inkscape:document-units="px" bordercolor="#666666" inkscape:window-x="0" inkscape:window-y="-1" fit-margin-bottom="1.3" inkscape:window-width="1366" inkscape:pageopacity="0.0" inkscape:pageshadow="2" pagecolor="#ffffff" inkscape:window-height="742" fit-margin-top="1.5" />
+ <metadata>
+  <rdf:rdf>
+   <cc:work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title />
+   </cc:work>
+  </rdf:rdf>
+ </metadata>
+ <g inkscape:label="Layer 1" inkscape:groupmode="layer" transform="translate(-9.4711205,-268.96138)">
+  <path stroke-linejoin="miter" d="m21.324,370.12,527.78,0" inkscape:connector-curvature="0" stroke="#000" stroke-linecap="butt" stroke-width="1.89459229px" fill="none" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,-1.0774874,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,103.93704,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,208.95157,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,313.96615,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,418.98068,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,523.99516,-143.41184)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path stroke-linejoin="miter" d="m21.324,423.16,527.78,0" inkscape:connector-curvature="0" stroke="#000" stroke-linecap="butt" stroke-width="1.89459229px" fill="none" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,-1.0774874,-90.363255)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <path sodipodi:rx="2.3214285" sodipodi:ry="2.6785715" sodipodi:type="arc" d="m12.857,305.04c0,1.4793-1.0393,2.6786-2.3214,2.6786s-2.3214-1.1992-2.3214-2.6786c0-1.4793,1.0393-2.6786,2.3214-2.6786s2.3214,1.1992,2.3214,2.6786z" transform="matrix(2.1930437,0,0,1.6857581,523.99516,-90.363255)" stroke="#008000" sodipodi:cy="305.04074" sodipodi:cx="10.535714" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="#008000" />
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="14.50034142px" font-style="normal" y="319.28983" x="169.88132" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="169.88132" y="319.28983">Treatment A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="15.15673828px" font-style="normal" y="393.44211" x="105.97239" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="105.97239" y="393.44211">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" sodipodi:linespacing="125%" font-size="15.15673828px" font-style="normal" y="393.44211" x="210.98692" font-family="Sans" xml:space="preserve" fill="#000000"><tspan y="393.44211" x="210.98692" sodipodi:role="line">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="15.15673828px" font-style="normal" y="393.44211" x="316.00143" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="316.00143" y="393.44211">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" sodipodi:linespacing="125%" font-size="15.15673828px" font-style="normal" y="393.44211" x="421.01599" font-family="Sans" xml:space="preserve" fill="#000000"><tspan y="393.44211" x="421.01599" sodipodi:role="line">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="15.15673828px" font-style="normal" y="393.44211" x="526.03052" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="526.03052" y="393.44211">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" sodipodi:linespacing="125%" font-size="15.15673828px" font-style="normal" y="456.59839" x="526.03052" font-family="Sans" xml:space="preserve" fill="#000000"><tspan y="456.59839" x="526.03052" sodipodi:role="line">A vs B</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="15.15673828px" font-style="normal" y="376.16748" x="588.19098" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="588.19098" y="376.16748">P = 0.02</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="8px" font-style="normal" y="330.60818" x="343.45187" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="343.45187" y="330.60818" /></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" sodipodi:linespacing="125%" font-size="15.15673828px" font-style="normal" y="429.21606" x="588.19098" font-family="Sans" xml:space="preserve" fill="#000000"><tspan y="429.21606" x="588.19098" sodipodi:role="line">P = 0.02</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="15.15673828px" font-style="normal" y="487.21957" x="25.371979" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="25.371979" y="487.21957">This first one mulst be corrected for multiple testing, leading to non-significance.</tspan><tspan sodipodi:role="line" x="25.371979" y="506.1655">The second one is significant, according to the frequentist view.</tspan></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="8px" font-style="normal" y="386.16656" x="256.57874" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="256.57874" y="386.16656" /></text>
+  <text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" xml:space="preserve" font-size="22.24538803px" font-style="normal" y="290.47159" x="80.326096" font-family="Sans" sodipodi:linespacing="125%" fill="#000000"><tspan sodipodi:role="line" x="80.326096" y="290.47159">Dilemma of the frequentist p-value</tspan></text>
+ </g>
+</svg>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Kaiyin Zhong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T20:48:48+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kindlychung.github.io/blog/2014/05/20/frequentist-dilemma/" data-via="" data-counturl="http://kindlychung.github.io/blog/2014/05/20/frequentist-dilemma/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/" title="Previous Post: Eclipse with pydev not satisfactory">&laquo; Eclipse with pydev not satisfactory</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/05/20/parametric-functions-from-different-perspecitives-dimensions/" title="Next Post: Parametric functions from different perspecitives (dimensions)">Parametric functions from different perspecitives (dimensions) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/parametric-functions-from-different-perspecitives-dimensions/">Parametric Functions From Different Perspecitives (Dimensions)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/frequentist-dilemma/">Frequentist Dilemma</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Kaiyin Zhong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function hidepre() {
+    var pre = this.getElementsByTagName("pre")[0]
+    if (pre.style.display === "none") {
+        pre.style.display = "block";
+    } else {
+        pre.style.display = "none";
+    }
+}
+// initial state of pre tags depends on whether there is a fig
+function checkimg() {
+    var imgs = document.getElementsByClassName("fig");
+    var pres = document.getElementsByTagName("pre");
+    if(imgs.length) {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "none";
+        });
+    } else {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "block";
+        });
+    }
+}
+function hidepreall() {
+    checkimg();
+    var prewraps = document.getElementsByClassName("prewrap");
+    if(prewraps.length) {
+        // for (var i = 0; i &lt; prewraps.length; i++) {
+        //     var prewrap = prewraps[i];
+        //     prewrap.onclick = hidepre;
+        // }
+        Array.prototype.slice.call(prewraps, 0).forEach(function(prewrap) {
+            prewrap.ondblclick = hidepre;
+        });
+    }
+}
+window.onload = hidepreall;
+</script>
+
+
+
+
+
+
+</body>
+</html>

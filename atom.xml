@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T19:59:28+02:00</updated>
+  <updated>2014-05-20T20:08:14+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Test Quote 1]]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-quote-1/"/>
+    <updated>2014-05-20T20:07:59+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-quote-1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA['Test Math']]></title>
@@ -227,15 +236,6 @@ else:
 <p>Aenean venenatis libero eget luctus dictum. Nam ultrices porttitor neque at commodo. Maecenas at eros id augue fringilla varius ut nec tortor. Vivamus laoreet urna vitae lacus euismod tincidunt. In sollicitudin, velit a tincidunt fringilla, lorem neque viverra est, at ultricies nulla leo sit amet tellus. Donec ornare libero sed nunc mattis accumsan sed eu nulla. Phasellus porta orci sem, quis commodo diam viverra ac. Ut pellentesque faucibus ipsum eget aliquam. In egestas neque ligula, a luctus magna accumsan a. Curabitur ornare nunc eget sem pharetra, eget molestie lacus blandit. Donec aliquet augue sit amet nibh semper, eu tincidunt lectus adipiscing. Nullam condimentum dui a libero mattis eleifend.</p>
 
 <p>Nullam convallis at ligula et ornare. Vivamus ut dignissim dolor. Phasellus ac lacus vel purus tempor lobortis vitae porta dolor. Pellentesque et diam placerat, interdum quam at, ultrices est. Pellentesque cursus ornare urna et bibendum. Proin congue justo consequat, hendrerit odio non, vehicula nisi. Vestibulum dignissim dolor ut sem sagittis, ut venenatis mi luctus. Duis aliquam consectetur dolor, et elementum leo pulvinar quis. Curabitur sollicitudin sodales justo id ultricies. Vestibulum bibendum dapibus tellus. Vestibulum vestibulum neque et nunc convallis cursus. Nulla convallis posuere leo quis vulputate. Nunc quis mi lobortis, ornare odio vulputate, eleifend augue. Sed pretium lorem justo, vitae ultrices metus iaculis et. Ut iaculis tortor quis nunc ultricies, a vulputate ante posuere.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Test Post 1]]></title>
-    <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-1/"/>
-    <updated>2014-05-20T18:35:34+02:00</updated>
-    <id>http://kindlychung.github.io/blog/2014/05/20/test-post-1</id>
-    <content type="html"><![CDATA[<h1 id="test-1">test 1</h1>
 ]]></content>
   </entry>
   

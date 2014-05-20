@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T19:47:19+02:00</updated>
+  <updated>2014-05-20T19:57:08+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -18,9 +18,9 @@
     <link href="http://kindlychung.github.io/blog/2014/05/20/test-math/"/>
     <updated>2014-05-20T19:46:38+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-math</id>
-    <content type="html"><![CDATA[<p>$$
-x<sup>2</sup> + y<sup>2</sup> = 1
-$$</p>
+    <content type="html"><![CDATA[<script type="math/tex; mode=display">
+x^2 + y^2 = 1
+</script>
 ]]></content>
   </entry>
   
@@ -29,7 +29,7 @@ $$</p>
     <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-14/"/>
     <updated>2014-05-20T19:38:49+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-14</id>
-    <content type="html"><![CDATA[<p>Octopress is a framework designed for Jekyll, the static blogging engine powering Github Pages. Have a look through the documentation and if you have trouble, I&rsquo;ll be happy to help. If you find errors in the documentation post an issue or fork and send a pull request to the master branch.</p>
+    <content type="html"><![CDATA[<p>Octopress is a framework designed for Jekyll, the static blogging engine powering Github Pages. Have a look through the documentation and if you have trouble, I’ll be happy to help. If you find errors in the documentation post an issue or fork and send a pull request to the master branch.</p>
 ]]></content>
   </entry>
   
@@ -63,7 +63,6 @@ else:
     print(err)
     exit(1)
 </pre>
-
 ]]></content>
   </entry>
   
@@ -198,7 +197,7 @@ else:
     <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-3/"/>
     <updated>2014-05-20T18:38:23+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-3</id>
-    <content type="html"><![CDATA[<h1>test 3</h1>
+    <content type="html"><![CDATA[<h1 id="test-3">test 3</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in dapibus lectus, non faucibus elit. Maecenas iaculis, ipsum non iaculis lobortis, elit sapien eleifend dui, sit amet malesuada magna leo quis magna. Suspendisse at consequat ante. Quisque vel felis sapien. Cras lobortis suscipit felis, ac malesuada lectus volutpat facilisis. Nulla risus ante, pulvinar molestie lorem vitae, sodales pharetra sem. Nulla ut ornare mauris, ac volutpat mi. Duis tristique congue sapien, non tempor ipsum convallis ac. Aliquam hendrerit massa id ligula rutrum condimentum. Etiam facilisis, diam vel eleifend elementum, diam turpis iaculis nisi, quis sollicitudin tortor justo sit amet lacus.</p>
 
@@ -217,7 +216,7 @@ else:
     <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-2/"/>
     <updated>2014-05-20T18:36:48+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-2</id>
-    <content type="html"><![CDATA[<h1>test 2</h1>
+    <content type="html"><![CDATA[<h1 id="test-2">test 2</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in dapibus lectus, non faucibus elit. Maecenas iaculis, ipsum non iaculis lobortis, elit sapien eleifend dui, sit amet malesuada magna leo quis magna. Suspendisse at consequat ante. Quisque vel felis sapien. Cras lobortis suscipit felis, ac malesuada lectus volutpat facilisis. Nulla risus ante, pulvinar molestie lorem vitae, sodales pharetra sem. Nulla ut ornare mauris, ac volutpat mi. Duis tristique congue sapien, non tempor ipsum convallis ac. Aliquam hendrerit massa id ligula rutrum condimentum. Etiam facilisis, diam vel eleifend elementum, diam turpis iaculis nisi, quis sollicitudin tortor justo sit amet lacus.</p>
 
@@ -236,7 +235,7 @@ else:
     <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-1/"/>
     <updated>2014-05-20T18:35:34+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-1</id>
-    <content type="html"><![CDATA[<h1>test 1</h1>
+    <content type="html"><![CDATA[<h1 id="test-1">test 1</h1>
 ]]></content>
   </entry>
   

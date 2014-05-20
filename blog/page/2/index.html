@@ -93,6 +93,42 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-12/">&#8216;Test With Title 12&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T19:32:34+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-11/">&#8216;Test With Title 11&#8217;</a></h1>
     
     
@@ -232,42 +268,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-7/">&#8216;Test With Title 7&#8217;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T19:25:23+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -283,6 +283,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/20/test-quote-1/">Test Quote 1</a>
@@ -340,10 +344,6 @@
         <a href="/blog/2014/05/20/test-with-title-3/">&#8216;Test With Title 3&#8217;</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title-2/">&#8216;Test With Title 2&#8217;</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -379,6 +379,56 @@
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function hidepre() {
+    var pre = this.getElementsByTagName("pre")[0]
+    if (pre.style.display === "none") {
+        pre.style.display = "block";
+    } else {
+        pre.style.display = "none";
+    }
+}
+// initial state of pre tags depends on whether there is a fig
+function checkimg() {
+    var imgs = document.getElementsByClassName("fig");
+    var pres = document.getElementsByTagName("pre");
+    if(imgs.length) {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "none";
+        });
+    } else {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "block";
+        });
+    }
+}
+function hidepreall() {
+    checkimg();
+    var prewraps = document.getElementsByClassName("prewrap");
+    if(prewraps.length) {
+        // for (var i = 0; i &lt; prewraps.length; i++) {
+        //     var prewrap = prewraps[i];
+        //     prewrap.onclick = hidepre;
+        // }
+        Array.prototype.slice.call(prewraps, 0).forEach(function(prewrap) {
+            prewrap.ondblclick = hidepre;
+        });
+    }
+}
+window.onload = hidepreall;
+</script>
+
 
 
 

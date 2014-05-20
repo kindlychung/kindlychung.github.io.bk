@@ -171,6 +171,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/20/test-quote-1/">Test Quote 1</a>
       </li>
     
@@ -226,10 +230,6 @@
         <a href="/blog/2014/05/20/test-with-title-3/">'Test With Title 3'</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title-2/">'Test With Title 2'</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -266,6 +266,56 @@
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function hidepre() {
+    var pre = this.getElementsByTagName("pre")[0]
+    if (pre.style.display === "none") {
+        pre.style.display = "block";
+    } else {
+        pre.style.display = "none";
+    }
+}
+// initial state of pre tags depends on whether there is a fig
+function checkimg() {
+    var imgs = document.getElementsByClassName("fig");
+    var pres = document.getElementsByTagName("pre");
+    if(imgs.length) {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "none";
+        });
+    } else {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "block";
+        });
+    }
+}
+function hidepreall() {
+    checkimg();
+    var prewraps = document.getElementsByClassName("prewrap");
+    if(prewraps.length) {
+        // for (var i = 0; i &lt; prewraps.length; i++) {
+        //     var prewrap = prewraps[i];
+        //     prewrap.onclick = hidepre;
+        // }
+        Array.prototype.slice.call(prewraps, 0).forEach(function(prewrap) {
+            prewrap.ondblclick = hidepre;
+        });
+    }
+}
+window.onload = hidepreall;
+</script>
+
 
 
 

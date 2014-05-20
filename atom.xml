@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T20:08:14+02:00</updated>
+  <updated>2014-05-20T20:15:16+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Eclipse With Pydev Not Satisfactory]]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/"/>
+    <updated>2014-05-20T20:12:52+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/eclipse-with-pydev-not-satisfactory</id>
+    <content type="html"><![CDATA[<p>
+Pydev test, fairly good, but not perfect
+</p>
+<p>
+I am trying out the pydev plugin for eclipse,
+so far the code completion looks ok, but the python console
+is not reliable at all.
+Here is a very simple test:
+</p>
+<div class="prewrap">
+<div class="pretitle">
+    <div class="codeclick">Double click to toggle code </div>
+</div>
+<pre>
+#!/usr/bin/python3
+
+from subprocess import Popen
+from subprocess import PIPE
+shell_cmd = ["xsel", "-b"]
+p = Popen(shell_cmd, stdin=PIPE)
+p.communicate("what the hell is this?".encode("ascii"))
+</pre>
+</div>
+
+<p>
+This code is just trying to put some text into the
+system clipboard, and it runs ok in ipython3,
+yet results are weird in eclipse. The same occurs to
+pycharm, I have no clue why this is happening.
+</p>
+
+<p>
+In the end I find kdevelop with the kdev-python plugin
+very nice to play with, responsive, snappy, and comes
+with a konsole terminal on the bottom panel, so that
+you can paste code directly into an ipython session.
+Compared to this, eclipse is really just a piece of
+junk&#8230;
+</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Test Quote 1]]></title>
@@ -207,25 +254,6 @@ else:
     <updated>2014-05-20T18:38:23+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-3</id>
     <content type="html"><![CDATA[<h1 id="test-3">test 3</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in dapibus lectus, non faucibus elit. Maecenas iaculis, ipsum non iaculis lobortis, elit sapien eleifend dui, sit amet malesuada magna leo quis magna. Suspendisse at consequat ante. Quisque vel felis sapien. Cras lobortis suscipit felis, ac malesuada lectus volutpat facilisis. Nulla risus ante, pulvinar molestie lorem vitae, sodales pharetra sem. Nulla ut ornare mauris, ac volutpat mi. Duis tristique congue sapien, non tempor ipsum convallis ac. Aliquam hendrerit massa id ligula rutrum condimentum. Etiam facilisis, diam vel eleifend elementum, diam turpis iaculis nisi, quis sollicitudin tortor justo sit amet lacus.</p>
-
-<p>Nunc iaculis velit id elit lacinia, non consequat magna commodo. Donec faucibus orci in dictum sollicitudin. Donec in dictum lectus, eu imperdiet quam. Donec hendrerit sapien sit amet dictum ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce erat magna, pretium non dictum sit amet, mollis ac neque. Nullam ut ligula tortor. Ut sit amet vehicula tortor, et tristique massa. Aliquam bibendum purus non leo pellentesque feugiat. In massa felis, mattis ac commodo at, ornare et arcu. Aliquam erat volutpat. Quisque pretium urna a neque bibendum, vitae posuere lectus sodales. Suspendisse at lorem nibh. Sed et metus congue, tincidunt turpis in, consequat quam. Phasellus ultricies, dui sit amet dapibus mattis, urna sapien interdum velit, ac congue massa sem ut lectus.</p>
-
-<p>Duis sem diam, semper sit amet ultricies ac, mattis vel ante. Sed ut erat pretium, fermentum sapien in, eleifend augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin laoreet dui ac porttitor viverra. Nullam lacus tortor, consequat nec leo non, tincidunt imperdiet lectus. Curabitur ullamcorper erat risus, fermentum adipiscing ligula iaculis ut. Pellentesque tempus volutpat tincidunt.</p>
-
-<p>Aenean venenatis libero eget luctus dictum. Nam ultrices porttitor neque at commodo. Maecenas at eros id augue fringilla varius ut nec tortor. Vivamus laoreet urna vitae lacus euismod tincidunt. In sollicitudin, velit a tincidunt fringilla, lorem neque viverra est, at ultricies nulla leo sit amet tellus. Donec ornare libero sed nunc mattis accumsan sed eu nulla. Phasellus porta orci sem, quis commodo diam viverra ac. Ut pellentesque faucibus ipsum eget aliquam. In egestas neque ligula, a luctus magna accumsan a. Curabitur ornare nunc eget sem pharetra, eget molestie lacus blandit. Donec aliquet augue sit amet nibh semper, eu tincidunt lectus adipiscing. Nullam condimentum dui a libero mattis eleifend.</p>
-
-<p>Nullam convallis at ligula et ornare. Vivamus ut dignissim dolor. Phasellus ac lacus vel purus tempor lobortis vitae porta dolor. Pellentesque et diam placerat, interdum quam at, ultrices est. Pellentesque cursus ornare urna et bibendum. Proin congue justo consequat, hendrerit odio non, vehicula nisi. Vestibulum dignissim dolor ut sem sagittis, ut venenatis mi luctus. Duis aliquam consectetur dolor, et elementum leo pulvinar quis. Curabitur sollicitudin sodales justo id ultricies. Vestibulum bibendum dapibus tellus. Vestibulum vestibulum neque et nunc convallis cursus. Nulla convallis posuere leo quis vulputate. Nunc quis mi lobortis, ornare odio vulputate, eleifend augue. Sed pretium lorem justo, vitae ultrices metus iaculis et. Ut iaculis tortor quis nunc ultricies, a vulputate ante posuere.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Test Post 2]]></title>
-    <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-2/"/>
-    <updated>2014-05-20T18:36:48+02:00</updated>
-    <id>http://kindlychung.github.io/blog/2014/05/20/test-post-2</id>
-    <content type="html"><![CDATA[<h1 id="test-2">test 2</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in dapibus lectus, non faucibus elit. Maecenas iaculis, ipsum non iaculis lobortis, elit sapien eleifend dui, sit amet malesuada magna leo quis magna. Suspendisse at consequat ante. Quisque vel felis sapien. Cras lobortis suscipit felis, ac malesuada lectus volutpat facilisis. Nulla risus ante, pulvinar molestie lorem vitae, sodales pharetra sem. Nulla ut ornare mauris, ac volutpat mi. Duis tristique congue sapien, non tempor ipsum convallis ac. Aliquam hendrerit massa id ligula rutrum condimentum. Etiam facilisis, diam vel eleifend elementum, diam turpis iaculis nisi, quis sollicitudin tortor justo sit amet lacus.</p>
 

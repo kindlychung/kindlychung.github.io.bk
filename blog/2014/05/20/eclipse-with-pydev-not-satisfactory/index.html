@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>'Test With Title 10' - Math, Stats and Technical stuff</title>
+  <title>Eclipse With Pydev Not Satisfactory - Math, Stats and Technical stuff</title>
   <meta name="author" content="Kaiyin Zhong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Pydev test, fairly good, but not perfect I am trying out the pydev plugin for eclipse,
+so far the code completion looks ok, but the python console &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-10">
+  <link rel="canonical" href="http://kindlychung.github.io/blog/2014/05/20/eclipse-with-pydev-not-satisfactory">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Math, Stats and Technical stuff" type="application/atom+xml">
@@ -90,7 +90,7 @@
   
   <header>
     
-      <h1 class="entry-title">'Test With Title 10'</h1>
+      <h1 class="entry-title">Eclipse With Pydev Not Satisfactory</h1>
     
     
       <p class="meta">
@@ -106,14 +106,52 @@
   
 
 
-<time datetime="2014-05-20T19:29:11+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+<time datetime="2014-05-20T20:12:52+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>
+Pydev test, fairly good, but not perfect
+</p>
+<p>
+I am trying out the pydev plugin for eclipse,
+so far the code completion looks ok, but the python console
+is not reliable at all.
+Here is a very simple test:
+</p>
+<div class="prewrap">
+<div class="pretitle">
+    <div class="codeclick">Double click to toggle code </div>
+</div>
+<pre>
+#!/usr/bin/python3
+
+from subprocess import Popen
+from subprocess import PIPE
+shell_cmd = ["xsel", "-b"]
+p = Popen(shell_cmd, stdin=PIPE)
+p.communicate("what the hell is this?".encode("ascii"))
+</pre>
+</div>
+
+<p>
+This code is just trying to put some text into the
+system clipboard, and it runs ok in ipython3,
+yet results are weird in eclipse. The same occurs to
+pycharm, I have no clue why this is happening.
+</p>
+
+<p>
+In the end I find kdevelop with the kdev-python plugin
+very nice to play with, responsive, snappy, and comes
+with a konsole terminal on the bottom panel, so that
+you can paste code directly into an ipython session.
+Compared to this, eclipse is really just a piece of
+junk&#8230;
+</p>
 </div>
 
 
@@ -136,7 +174,7 @@
   
 
 
-<time datetime="2014-05-20T19:29:11+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+<time datetime="2014-05-20T20:12:52+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
       
 
 
@@ -144,7 +182,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kindlychung.github.io/blog/2014/05/20/test-with-title-10/" data-via="" data-counturl="http://kindlychung.github.io/blog/2014/05/20/test-with-title-10/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kindlychung.github.io/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/" data-via="" data-counturl="http://kindlychung.github.io/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/" >Tweet</a>
   
   
   
@@ -153,10 +191,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/05/20/test-with-title-9/" title="Previous Post: 'test with title 9'">&laquo; 'test with title 9'</a>
+        <a class="basic-alignment left" href="/blog/2014/05/20/test-quote-1/" title="Previous Post: test quote 1">&laquo; test quote 1</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/05/20/test-with-title-11/" title="Next Post: 'test with title 11'">'test with title 11' &raquo;</a>
       
     </p>
   </footer>

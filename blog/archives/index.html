@@ -9,10 +9,10 @@
   <meta name="author" content="Kaiyin Zhong">
 
   
-  <meta name="description" content="Blog Archive 2014 Test Quote 1
+  <meta name="description" content="Blog Archive 2014 Eclipse With Pydev Not Satisfactory
+May 20 2014 Test Quote 1
 May 20 2014 &#8216;Test Math&#8217;
-May 20 2014 &#8216;Test With Title 14&#8217;
-May 20 2014 &#8216;Test With Title &hellip;">
+May 20 2014 &#8216;Test With &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,6 +101,16 @@ May 20 2014 &#8216;Test With Title &hellip;">
 
   
   <h2>2014</h2>
+
+<article>
+  
+<h1><a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a></h1>
+<time datetime="2014-05-20T20:12:52+02:00" pubdate><span class='month'>May</span> <span class='day'>20</span> <span class='year'>2014</span></time>
+
+
+</article>
+
+
 
 <article>
   
@@ -354,6 +364,10 @@ May 20 2014 &#8216;Test With Title &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/20/test-quote-1/">Test Quote 1</a>
       </li>
     
@@ -409,10 +423,6 @@ May 20 2014 &#8216;Test With Title &hellip;">
         <a href="/blog/2014/05/20/test-with-title-3/">'Test With Title 3'</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title-2/">'Test With Title 2'</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -449,6 +459,56 @@ May 20 2014 &#8216;Test With Title &hellip;">
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function hidepre() {
+    var pre = this.getElementsByTagName("pre")[0]
+    if (pre.style.display === "none") {
+        pre.style.display = "block";
+    } else {
+        pre.style.display = "none";
+    }
+}
+// initial state of pre tags depends on whether there is a fig
+function checkimg() {
+    var imgs = document.getElementsByClassName("fig");
+    var pres = document.getElementsByTagName("pre");
+    if(imgs.length) {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "none";
+        });
+    } else {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "block";
+        });
+    }
+}
+function hidepreall() {
+    checkimg();
+    var prewraps = document.getElementsByClassName("prewrap");
+    if(prewraps.length) {
+        // for (var i = 0; i &lt; prewraps.length; i++) {
+        //     var prewrap = prewraps[i];
+        //     prewrap.onclick = hidepre;
+        // }
+        Array.prototype.slice.call(prewraps, 0).forEach(function(prewrap) {
+            prewrap.ondblclick = hidepre;
+        });
+    }
+}
+window.onload = hidepreall;
+</script>
+
 
 
 

@@ -9,8 +9,8 @@
   <meta name="author" content="Kaiyin Zhong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Pydev test, fairly good, but not perfect I am trying out the pydev plugin for eclipse,
+so far the code completion looks ok, but the python console &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,80 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T20:12:52+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+Pydev test, fairly good, but not perfect
+</p>
+<p>
+I am trying out the pydev plugin for eclipse,
+so far the code completion looks ok, but the python console
+is not reliable at all.
+Here is a very simple test:
+</p>
+<div class="prewrap">
+<div class="pretitle">
+    <div class="codeclick">Double click to toggle code </div>
+</div>
+<pre>
+#!/usr/bin/python3
+
+from subprocess import Popen
+from subprocess import PIPE
+shell_cmd = ["xsel", "-b"]
+p = Popen(shell_cmd, stdin=PIPE)
+p.communicate("what the hell is this?".encode("ascii"))
+</pre>
+</div>
+
+<p>
+This code is just trying to put some text into the
+system clipboard, and it runs ok in ipython3,
+yet results are weird in eclipse. The same occurs to
+pycharm, I have no clue why this is happening.
+</p>
+
+<p>
+In the end I find kdevelop with the kdev-python plugin
+very nice to play with, responsive, snappy, and comes
+with a konsole terminal on the bottom panel, so that
+you can paste code directly into an ipython session.
+Compared to this, eclipse is really just a piece of
+junk&#8230;
+</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -258,42 +332,6 @@ else:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-12/">&#8216;Test With Title 12&#8217;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T19:32:34+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -307,6 +345,10 @@ else:
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/eclipse-with-pydev-not-satisfactory/">Eclipse With Pydev Not Satisfactory</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/20/test-quote-1/">Test Quote 1</a>
@@ -364,10 +406,6 @@ else:
         <a href="/blog/2014/05/20/test-with-title-3/">&#8216;Test With Title 3&#8217;</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title-2/">&#8216;Test With Title 2&#8217;</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -403,6 +441,56 @@ else:
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function hidepre() {
+    var pre = this.getElementsByTagName("pre")[0]
+    if (pre.style.display === "none") {
+        pre.style.display = "block";
+    } else {
+        pre.style.display = "none";
+    }
+}
+// initial state of pre tags depends on whether there is a fig
+function checkimg() {
+    var imgs = document.getElementsByClassName("fig");
+    var pres = document.getElementsByTagName("pre");
+    if(imgs.length) {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "none";
+        });
+    } else {
+        Array.prototype.slice.call(pres, 0).forEach(function(pre) {
+            pre.style.display = "block";
+        });
+    }
+}
+function hidepreall() {
+    checkimg();
+    var prewraps = document.getElementsByClassName("prewrap");
+    if(prewraps.length) {
+        // for (var i = 0; i &lt; prewraps.length; i++) {
+        //     var prewrap = prewraps[i];
+        //     prewrap.onclick = hidepre;
+        // }
+        Array.prototype.slice.call(prewraps, 0).forEach(function(prewrap) {
+            prewrap.ondblclick = hidepre;
+        });
+    }
+}
+window.onload = hidepreall;
+</script>
+
 
 
 

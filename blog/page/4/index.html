@@ -9,7 +9,8 @@
   <meta name="author" content="Kaiyin Zhong">
 
   
-  <meta name="description" content="test 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in dapibus lectus, non faucibus elit. Maecenas iaculis, ipsum non iaculis &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -29,6 +30,20 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>
+    MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"],
+               equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                   processEscapes: true },
+        "HTML-CSS": { availableFonts: ["TeX"],
+                      linebreaks: { automatic: true } }
+    });
+</script>
 
   
 
@@ -65,6 +80,78 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title/">&#8216;Test With Title&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T19:17:10+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/20/test-post-python/">&#8216;Test Post Python&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T19:11:54+02:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -194,108 +281,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-9/">Test With Title 9</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T00:00:00+02:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>finally we get a post directly from gvim!</h1>
-
-<pre>
-#!/usr/bin/python3
-
-import subprocess
-import sys
-import os
-
-titlestring = sys.argv[1]
-rake_arg = "new_post['{}']".format(titlestring)
-p = subprocess.Popen(["rake", rake_arg], stdout=subprocess.PIPE)
-out, err = p.communicate()
-out = out.decode()
-out = out.replace("Creating new post: ", "", 1)
-cwd = os.getcwd()
-postfile = os.path.join(cwd, out)
-
-if not err:
-    subprocess.call(["gvim", postfile])
-else:
-    print(err)
-    exit(1)
-    </pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/20/test-with-title-12/">Test With Title 12</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T00:00:00+02:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>fdafdsafds
-fdsafds
-fdsafdsa
-fdsafds
-afdsafds
-afdsafdsa</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/5/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -308,6 +296,14 @@ afdsafdsa</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/test-math/">&#8216;Test Math&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/test-with-title-14/">&#8216;Test With Title 14&#8217;</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/20/test-with-title-13/">&#8216;Test With Title 13&#8217;</a>
@@ -359,14 +355,6 @@ afdsafdsa</p>
     
       <li class="post">
         <a href="/blog/2014/05/20/test-with-title-1/">&#8216;Test With Title 1&#8217;</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title/">&#8216;Test With Title&#8217;</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/20/test-post-python/">&#8216;Test Post Python&#8217;</a>
       </li>
     
   </ul>

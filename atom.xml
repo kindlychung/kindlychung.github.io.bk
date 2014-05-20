@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T19:36:36+02:00</updated>
+  <updated>2014-05-20T19:47:19+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA['Test Math']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-math/"/>
+    <updated>2014-05-20T19:46:38+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-math</id>
+    <content type="html"><![CDATA[<p>$$
+x<sup>2</sup> + y<sup>2</sup> = 1
+$$</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 14']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-14/"/>
+    <updated>2014-05-20T19:38:49+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-14</id>
+    <content type="html"><![CDATA[<p>Octopress is a framework designed for Jekyll, the static blogging engine powering Github Pages. Have a look through the documentation and if you have trouble, I&rsquo;ll be happy to help. If you find errors in the documentation post an issue or fork and send a pull request to the master branch.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA['Test With Title 13']]></title>
@@ -217,53 +237,6 @@ else:
     <updated>2014-05-20T18:35:34+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-1</id>
     <content type="html"><![CDATA[<h1>test 1</h1>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Test With Title 9]]></title>
-    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-9/"/>
-    <updated>2014-05-20T00:00:00+02:00</updated>
-    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-9</id>
-    <content type="html"><![CDATA[<h1>finally we get a post directly from gvim!</h1>
-
-<pre>
-#!/usr/bin/python3
-
-import subprocess
-import sys
-import os
-
-titlestring = sys.argv[1]
-rake_arg = "new_post['{}']".format(titlestring)
-p = subprocess.Popen(["rake", rake_arg], stdout=subprocess.PIPE)
-out, err = p.communicate()
-out = out.decode()
-out = out.replace("Creating new post: ", "", 1)
-cwd = os.getcwd()
-postfile = os.path.join(cwd, out)
-
-if not err:
-    subprocess.call(["gvim", postfile])
-else:
-    print(err)
-    exit(1)
-    </pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Test With Title 12]]></title>
-    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-12/"/>
-    <updated>2014-05-20T00:00:00+02:00</updated>
-    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-12</id>
-    <content type="html"><![CDATA[<p>fdafdsafds
-fdsafds
-fdsafdsa
-fdsafds
-afdsafds
-afdsafdsa</p>
 ]]></content>
   </entry>
   

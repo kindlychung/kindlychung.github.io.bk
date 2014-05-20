@@ -30,6 +30,20 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>
+    MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"],
+               equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                   processEscapes: true },
+        "HTML-CSS": { availableFonts: ["TeX"],
+                      linebreaks: { automatic: true } }
+    });
+</script>
 
   
 
@@ -150,6 +164,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/20/test-math/">'Test Math'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/test-with-title-14/">'Test With Title 14'</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/20/test-with-title-13/">'Test With Title 13'</a>
       </li>
     
@@ -199,14 +221,6 @@
     
       <li class="post">
         <a href="/blog/2014/05/20/test-with-title-1/">'Test With Title 1'</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/20/test-with-title/">'Test With Title'</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/20/test-post-python/">'Test Post Python'</a>
       </li>
     
   </ul>

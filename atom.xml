@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T18:51:45+02:00</updated>
+  <updated>2014-05-20T19:27:15+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 9']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-9/"/>
+    <updated>2014-05-20T19:26:10+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-9</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 8']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-8/"/>
+    <updated>2014-05-20T19:25:40+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-8</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 7']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-7/"/>
+    <updated>2014-05-20T19:25:23+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-7</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 6']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-6/"/>
+    <updated>2014-05-20T19:24:46+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-6</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 5']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-5/"/>
+    <updated>2014-05-20T19:23:36+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-5</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 4']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-4/"/>
+    <updated>2014-05-20T19:22:58+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-4</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 3']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-3/"/>
+    <updated>2014-05-20T19:18:47+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-3</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 2']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-2/"/>
+    <updated>2014-05-20T19:18:29+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-2</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title 1']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-1/"/>
+    <updated>2014-05-20T19:17:20+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-1</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test With Title']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title/"/>
+    <updated>2014-05-20T19:17:10+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['Test Post Python']]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-post-python/"/>
+    <updated>2014-05-20T19:11:54+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-post-python</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Test Post 3]]></title>
@@ -57,6 +156,39 @@
     <updated>2014-05-20T18:35:34+02:00</updated>
     <id>http://kindlychung.github.io/blog/2014/05/20/test-post-1</id>
     <content type="html"><![CDATA[<h1>test 1</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Test With Title 9]]></title>
+    <link href="http://kindlychung.github.io/blog/2014/05/20/test-with-title-9/"/>
+    <updated>2014-05-20T00:00:00+02:00</updated>
+    <id>http://kindlychung.github.io/blog/2014/05/20/test-with-title-9</id>
+    <content type="html"><![CDATA[<h1>finally we get a post directly from gvim!</h1>
+
+<pre>
+#!/usr/bin/python3
+
+import subprocess
+import sys
+import os
+
+titlestring = sys.argv[1]
+rake_arg = "new_post['{}']".format(titlestring)
+p = subprocess.Popen(["rake", rake_arg], stdout=subprocess.PIPE)
+out, err = p.communicate()
+out = out.decode()
+out = out.replace("Creating new post: ", "", 1)
+cwd = os.getcwd()
+postfile = os.path.join(cwd, out)
+
+if not err:
+    subprocess.call(["gvim", postfile])
+else:
+    print(err)
+    exit(1)
+    </pre>
+
 ]]></content>
   </entry>
   

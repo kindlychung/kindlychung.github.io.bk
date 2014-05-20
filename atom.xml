@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T23:22:49+02:00</updated>
+  <updated>2014-05-21T00:07:34+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -35,27 +35,31 @@ parametric_plot3d((cos(t), sin(t), 0.2*sin(15*t)), (t, 0, 6.28), aspect_ratio=(1
 <p>
 This can be parametrized like this:
 </p>
-<pre>
-\begin{align*}
-\begin{pmatrix}
-    r \\
-    \theta \\
-    z \\
-\end{pmatrix}
-&=
-    \begin{pmatrix}
-        1\\ t \\ \sin kt \\
-    \end{pmatrix}
-\end{align*}
-</pre>
+
+&#92;begin{align*}
+&#92;begin{pmatrix}
+    r &#92;&#92;
+    &#92;theta &#92;&#92;
+    z &#92;&#92;
+&#92;end{pmatrix}
+&amp;=
+    &#92;begin{pmatrix}
+        1 &#92;&#92;
+        t &#92;&#92;
+        &#92;sin kt &#92;&#92;
+    &#92;end{pmatrix}
+&#92;end{align*}
+
 <p>
 Translated into xyz-coordinates:
 </p>
-\begin{align*}
-    \begin{pmatrix}
-        \cos t &#92; \sin t &#92; \sin kt &#92;
-    \end{pmatrix}
-\end{align*}
+<p>
+&#92;begin{align*}
+  &#92;begin{pmatrix}
+      &#92;cos t &#92;&#92; &#92;sin t &#92;&#92; &#92;sin kt &#92;&#92;
+  &#92;end{pmatrix}
+&#92;end{align*}
+</p>
 <p>
 where t is the angle turned on the xy-plane.
 </p>
@@ -87,35 +91,33 @@ Here is the lateral view. $\theta_1$ is invisible here.
 <p>
 Then we can parametrize it this way:
 </p>
-\begin{align*}
-    \begin{pmatrix}
-        r_1 &#92; \theta_1 &#92;
-        r_2 &#92; \theta_2 &#92;
-    \end{pmatrix}
-    &=
-        \begin{pmatrix}
-            r_1 &#92; t &#92; r_2 &#92; kt &#92;
-        \end{pmatrix}
-\end{align*}
+
+&#92;begin{align*}
+    &#92;begin{pmatrix}
+        r_1 &#92;&#92; &#92;theta_1 &#92;&#92;
+        r_2 &#92;&#92; &#92;theta_2 &#92;&#92;
+    &#92;end{pmatrix}
+    &amp;=
+        &#92;begin{pmatrix}
+            r_1 &#92;&#92; t &#92;&#92; r_2 &#92;&#92; kt &#92;&#92;
+        &#92;end{pmatrix}
+&#92;end{align*}
+
 <p>
 Translated into xyz-coordinates:
 </p>
-\begin{align*}
-    \begin{pmatrix}
-        (r1 + \cos kt)\cos t &#92;
-        (r1 + \cos kt)\sin t &#92;
-        \sin kt &#92;
-    \end{pmatrix}
-\end{align*}
+
+&#92;begin{align*}
+    &#92;begin{pmatrix}
+        (r1 + &#92;cos kt)&#92;cos t &#92;&#92;
+        (r1 + &#92;cos kt)&#92;sin t &#92;&#92;
+        &#92;sin kt &#92;&#92;
+    &#92;end{pmatrix}
+&#92;end{align*}
+
 <p>
 where t is the angle turned on the xy-plane.
 </p>
-
-
-
-
-
-
 ]]></content>
   </entry>
   

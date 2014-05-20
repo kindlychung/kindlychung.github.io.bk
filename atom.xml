@@ -4,7 +4,7 @@
   <title><![CDATA[Math, Stats and Technical stuff]]></title>
   <link href="http://kindlychung.github.io/atom.xml" rel="self"/>
   <link href="http://kindlychung.github.io/"/>
-  <updated>2014-05-20T23:18:19+02:00</updated>
+  <updated>2014-05-20T23:22:49+02:00</updated>
   <id>http://kindlychung.github.io/</id>
   <author>
     <name><![CDATA[Kaiyin Zhong]]></name>
@@ -35,19 +35,19 @@ parametric_plot3d((cos(t), sin(t), 0.2*sin(15*t)), (t, 0, 6.28), aspect_ratio=(1
 <p>
 This can be parametrized like this:
 </p>
-<div>
+<pre>
 \begin{align*}
 \begin{pmatrix}
-    r &#92;
-    \theta &#92;
-    z &#92;
+    r \\
+    \theta \\
+    z \\
 \end{pmatrix}
 &=
     \begin{pmatrix}
-        1&#92; t &#92; \sin kt &#92;
+        1\\ t \\ \sin kt \\
     \end{pmatrix}
 \end{align*}
-</div>
+</pre>
 <p>
 Translated into xyz-coordinates:
 </p>
